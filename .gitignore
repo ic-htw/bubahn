@@ -9,3 +9,4 @@
 .history/
 
 **/const.py
+**/__pycache__
