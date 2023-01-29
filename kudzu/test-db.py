@@ -15,7 +15,9 @@ create node table haltestelle (
 # con.execute(q)
 
 q = """
-match (h:haltestelle) return h.bez;
+match (h1:haltestelle)-[s:segment*1..2]->(h2:haltestelle)
+where h1.hid=10166 
+return h1.bez, h2.bez;
 """
 pdf = con.execute(q).getAsDF()
 print(pdf)
