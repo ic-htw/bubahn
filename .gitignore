@@ -8,7 +8,7 @@
 # Local History for Visual Studio Code
 .history/
 
-**/cred.py
+**/cred*.py
 **/*.duckdb
 **/*.duckdb.wal
 **/*.duckdb.tmp
