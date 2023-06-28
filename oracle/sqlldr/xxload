@@ -1,0 +1,8 @@
+sqlldr userid=ububahn/$1 control=ld_linie.txt;
+sqlldr userid=ububahn/$1 control=ld_haltestelle.txt;
+sqlldr userid=ububahn/$1 control=ld_unterlinie.txt;
+sqlldr userid=ububahn/$1 control=ld_segment.txt;
+sqlldr userid=ububahn/$1 control=ld_abschnitt.txt;
+sqlldr userid=ububahn/$1 control=ld_zeitplan.txt;
+sqlldr userid=ububahn/$1 control=ld_fahrt.txt;
+sqlldr userid=ububahn/$1 control=ld_halt.txt;

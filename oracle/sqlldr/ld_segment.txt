@@ -1,0 +1,8 @@
+options (skip=1)
+load data
+infile '../../csv/bubahn/segment.csv'
+truncate
+into table segment
+fields terminated by ','
+trailing nullcols
+(hid_a,hid_b,laenge_in_meter)

@@ -1,0 +1,8 @@
+options (skip=1)
+load data
+infile '../../csv/bubahn/unterlinie.csv'
+truncate
+into table unterlinie
+fields terminated by ','
+trailing nullcols
+(ULID,LID)

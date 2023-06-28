@@ -1,0 +1,8 @@
+options (skip=1)
+load data
+infile '../../csv/bubahn/abschnitt.csv'
+truncate
+into table abschnitt
+fields terminated by ','
+trailing nullcols
+(ULID,NR,HID_A,HID_B,HAELT "substr(:HAELT,0,1)")

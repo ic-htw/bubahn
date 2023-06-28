@@ -1,0 +1,8 @@
+options (skip=1)
+load data
+infile '../../csv/bubahn/zeitplan.csv'
+truncate
+into table zeitplan
+fields terminated by ','
+trailing nullcols
+(ZPID,DATUM_BEGINN date "YYYY-MM-DD",DATUM_ENDE date "YYYY-MM-DD",MO,DI,MI,DO,FR,SA,SO)

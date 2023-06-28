@@ -1,0 +1,8 @@
+options (skip=1)
+load data
+infile '../../csv/bubahn/halt.csv'
+truncate
+into table halt
+fields terminated by ','
+trailing nullcols
+(HAID,FID,HID,NR,ZEIT_ANKUNFT,ZEIT_ABFAHRT "substr(:ZEIT_ABFAHRT,0,8)")
