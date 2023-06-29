@@ -1,21 +1,32 @@
-drop PROPERTY GRAPH BUBAHN_GRAPH
-CREATE PROPERTY GRAPH BUBAHN_GRAPH
-    VERTEX TABLES (
-        Haltestelle
-        KEY (HID)
-        PROPERTIES (HID, Bez)
+-- @block
+drop property graph bubahn_graph;
+create property graph bubahn_graph
+    vertex tables (
+        haltestelle
+        key (hid)
+        properties (hid, bez)
     )
-    EDGE TABLES (
-        Segment
-        KEY (HID_A, HID_B)
-        SOURCE KEY (HID_A) REFERENCES Haltestelle(HID)
-        DESTINATION KEY (HID_B) REFERENCES Haltestelle(HID)
-        PROPERTIES (Laenge_In_Meter)
+    edge tables (
+        segment
+        key (hid_a, hid_b)
+        source key (hid_a) references haltestelle(hid)
+        destination key (hid_b) references haltestelle(hid)
+        properties (laenge_in_meter)
     );
 
+GRANT READ ANY PROPERTY GRAPH TO public;
 
-SELECT * FROM GRAPH_TABLE (BUBAHN_GRAPH
-  MATCH
-  (h1 IS Haltestelle WHERE h1.hid=10296) -[s IS Segment]->{1,10}(h2 IS Haltestelle)
-  COLUMNS (h1.hid AS hid1, h1.bez AS bez1, h2.hid AS hid2, h2.bez AS bez2)
+-- @block
+alter session set current_schema=ububahn;
+
+-- @block
+-- @label xxx
+-- @label yyy
+select * from graph_table (bubahn_graph
+  match
+  (h1 is haltestelle where h1.hid=10296) -[s is segment]->{1,10}(h2 is haltestelle)
+  columns (h1.hid as hid1, h1.bez as bez1, h2.hid as hid2, h2.bez as bez2)
 );
+
+-- @block
+select
