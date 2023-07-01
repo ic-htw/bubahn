@@ -1,0 +1,61 @@
+Linie	         10	    1.017
+Unterlinie	     40	    1.017.001
+Abschnitt	    570	
+Segment	        184	
+Haltestelle	    173	    10.001
+Zeitplan          2     100.001
+Fahrt           790     1.017.001.001
+Halt          13828     1.017.001.001.001
+
+Alexanderplatz 10145
+BerlinHauptbahnhof 10146
+Berliner Str. 10189
+BrandenburgerTor 10147
+Bundestag 10200
+Bundesplatz  10148
+Fehrbelliner Platz  10209
+HeidelbergerPlatz 10152
+Hohenzollernplatz  10229
+KottbusserTor 10243
+Mierendorffplatz  10256
+Gesundbrunnen Bhf  10151
+Nikolassee  10082
+PotsdamerPlatz 10164
+Schöneberg  10108
+Schloßstr 10296
+Südkreuz Bhf  10123
+Südstern  10307
+Tempelhof  10169
+Zoologischer Garten Bhf  10179
+
+1017	U1
+1018	U2
+1019	U3
+1020	U4
+1021	U5
+1022	U55
+1023	U6
+1024	U7
+1025	U8
+1026	U9
+
+U1	1017001	WarschauerStr	UhlandStr	13
+U1	1017002	UhlandStr	WarschauerStr	13
+U2	1018001	Pankow	Ruhleben	29
+U2	1018002	Ruhleben	Pankow	29
+U3	1019001	WarschauerStr	KrummeLanke	24
+U3	1019002	KrummeLanke	WarschauerStr	24
+U4	1020001	InnsbruckerPlatz	Nollendorfplatz	5
+U4	1020002	Nollendorfplatz	InnsbruckerPlatz	5
+U5	1021001	Alexanderplatz	Hönow	20
+U5	1021002	Hönow	Alexanderplatz	20
+U55	1022001	BerlinHauptbahnhof	BrandenburgerTor	3
+U55	1022002	BrandenburgerTor	BerlinHauptbahnhof	3
+U6	1023001	AltMariendorf	AltTegel	29
+U6	1023002	AltTegel	AltMariendorf	29
+U7	1024001	Rudow	RathausSpandau	40
+U7	1024002	RathausSpandau	Rudow	40
+U8	1025001	HermannStr	Wittenau	24
+U8	1025002	Wittenau	HermannStr	24
+U9	1026001	RathausSteglitz	OsloerStr	18
+U9	1026002	OsloerStr	RathausSteglitz	18

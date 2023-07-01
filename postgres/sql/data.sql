@@ -22,3 +22,8 @@ update haltestelle set posp = ST_Transform(pos, 31468);
 update segment s set laenge_in_meter = ST_Distance(h1.pos::geography, h2.pos::geography) 
   from haltestelle h1, haltestelle h2 where h1.hid=s.hid_a and h2.hid=s.hid_b;
 
+drop table segment_bi;
+create table segment_bi as 
+select hid_a, hid_b, laenge_in_meter from segment
+union
+select hid_b, hid_a, laenge_in_meter from segment;
